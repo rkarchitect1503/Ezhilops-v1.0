@@ -111,6 +111,36 @@ h2{font-size:clamp(26px,4vw,40px);font-weight:800;max-width:700px;}
 .orbit-card:nth-child(4){animation-delay:1.5s;}
 @keyframes float{0%,100%{transform:translateY(0);}50%{transform:translateY(-10px);}}
 
+/* TESTIMONIALS */
+.testimonial-card{display:flex;flex-direction:column;gap:16px;}
+.testimonial-stars{color:#fbbf24;font-size:18px;letter-spacing:2px;}
+.card p.testimonial-quote{color:var(--text);font-size:15px;flex:1;}
+.testimonial-author strong{display:block;font-size:15px;}
+.testimonial-author span{color:var(--text-dim);font-size:13.5px;}
+.testimonial-tag{
+  align-self:flex-start;padding:4px 12px;border-radius:999px;
+  background:rgba(34,211,238,0.1);color:var(--accent);font-size:12px;font-weight:500;
+}
+.testimonial-empty{text-align:center;max-width:640px;margin:0 auto;}
+.testimonial-empty:hover{transform:none;}
+.testimonial-empty[hidden],#testimonialGrid[hidden]{display:none;}
+
+.feedback-wrap{display:grid;grid-template-columns:1fr 1.3fr;gap:60px;margin-top:70px;align-items:start;}
+.feedback-wrap h3{font-size:24px;margin-bottom:12px;}
+.feedback-wrap > div > p{color:var(--text-dim);}
+
+.star-rating{border:none;}
+.star-rating legend{font-size:14px;color:var(--text-dim);margin-bottom:6px;}
+.stars{display:inline-flex;flex-direction:row-reverse;gap:4px;}
+.stars input{position:absolute;opacity:0;width:1px;height:1px;}
+.stars label{font-size:30px;color:rgba(255,255,255,0.18);cursor:pointer;transition:.15s;line-height:1;}
+.stars label:hover,.stars label:hover ~ label,
+.stars input:checked ~ label{color:#fbbf24;}
+.stars input:focus-visible + label{outline:2px solid var(--primary);outline-offset:2px;border-radius:4px;}
+
+.consent{display:flex;gap:10px;align-items:flex-start;font-size:13.5px;color:var(--text-dim);cursor:pointer;}
+.consent input{width:auto;margin-top:4px;accent-color:var(--primary);}
+
 /* CONTACT */
 .contact-inner{display:grid;grid-template-columns:1fr 1fr;gap:60px;}
 .contact-details{margin-top:30px;display:flex;flex-direction:column;gap:16px;}
@@ -139,6 +169,7 @@ input:focus,select:focus,textarea:focus{outline:none;border-color:var(--primary)
 @media(max-width:900px){
   .nav-links,.nav-cta{display:none;}
   .hamburger{display:flex;}
-  .grid-3,.grid-2,.about-inner,.contact-inner{grid-template-columns:1fr;}
+  .grid-3,.grid-2,.about-inner,.contact-inner,.feedback-wrap{grid-template-columns:1fr;}
+  .feedback-wrap{gap:24px;}
   .form-row{grid-template-columns:1fr;}
 }

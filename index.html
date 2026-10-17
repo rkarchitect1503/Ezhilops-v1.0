@@ -23,6 +23,7 @@
       <a href="#services">Services</a>
       <a href="#migrations">Migrations</a>
       <a href="#about">About</a>
+      <a href="#testimonials">Testimonials</a>
       <a href="#contact">Contact</a>
     </nav>
     <a href="#contact" class="btn btn-primary nav-cta">Get a Free Consult</a>
@@ -175,6 +176,78 @@
       <div class="orbit-card">🧩 M365</div>
       <div class="orbit-card">🔗 Azure DevOps</div>
       <div class="orbit-card">📜 Terraform</div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="testimonials" id="testimonials">
+  <div class="container">
+    <p class="eyebrow">Client Feedback</p>
+    <h2>What Our Clients Say</h2>
+    <p class="section-sub">Real feedback from the teams we've helped deploy, migrate, and automate.</p>
+
+    <div class="grid grid-3" id="testimonialGrid"></div>
+    <div class="card testimonial-empty" id="testimonialEmpty" hidden>
+      <div class="icon">💬</div>
+      <h3>Be the first to share your experience</h3>
+      <p>Worked with EOs? We'd love to hear how it went — your feedback helps us improve and helps others choose with confidence.</p>
+    </div>
+
+    <div class="feedback-wrap" id="feedback">
+      <div>
+        <h3>Share Your Feedback</h3>
+        <p>Tell us about your experience working with EOs. Every submission is reviewed before it's published on this page.</p>
+      </div>
+
+      <form class="contact-form" id="feedbackForm">
+        <input type="hidden" name="access_key" value="936ff566-ab6f-486e-ba40-7d80868ab907">
+        <input type="hidden" name="subject" value="New Testimonial from EOs Website">
+        <input type="hidden" name="from_name" value="EOs Website - Feedback">
+        <input type="checkbox" name="botcheck" style="display:none">
+
+        <fieldset class="star-rating">
+          <legend>Your Rating</legend>
+          <div class="stars">
+            <input type="radio" id="star5" name="rating" value="5" required><label for="star5" title="5 stars">★</label>
+            <input type="radio" id="star4" name="rating" value="4"><label for="star4" title="4 stars">★</label>
+            <input type="radio" id="star3" name="rating" value="3"><label for="star3" title="3 stars">★</label>
+            <input type="radio" id="star2" name="rating" value="2"><label for="star2" title="2 stars">★</label>
+            <input type="radio" id="star1" name="rating" value="1"><label for="star1" title="1 star">★</label>
+          </div>
+        </fieldset>
+
+        <div class="form-row">
+          <input type="text" name="name" placeholder="Full Name" required>
+          <input type="email" name="email" placeholder="Email Address (not published)" required>
+        </div>
+        <div class="form-row">
+          <input type="text" name="role" placeholder="Job Title">
+          <input type="text" name="company" placeholder="Company">
+        </div>
+        <select name="service">
+          <option value="">Service You Used</option>
+          <option>Cloud Deployment Services</option>
+          <option>Legacy Infrastructure Management</option>
+          <option>Cloud Cost & Performance Optimization</option>
+          <option>Managed IT Services</option>
+          <option>Microsoft 365 Infrastructure Management</option>
+          <option>SharePoint Development & Management</option>
+          <option>DevOps Services</option>
+          <option>Azure DevOps Implementation</option>
+          <option>Terraform (Infrastructure as Code)</option>
+          <option>Collaboration & Identity Tool Migration</option>
+          <option>On-Premises to Cloud Migration (Azure/AWS/GCP)</option>
+          <option>Cross-Cloud Migration (AWS/Azure/GCP)</option>
+        </select>
+        <textarea name="message" rows="4" placeholder="How was your experience working with us?" required></textarea>
+        <label class="consent">
+          <input type="checkbox" name="publish_consent" value="Yes" required>
+          <span>I agree that EOs may publish my name, title, company, and feedback on this website.</span>
+        </label>
+        <button type="submit" class="btn btn-primary btn-full" id="feedbackBtn">Submit Feedback</button>
+        <p class="form-note" id="feedbackNote"></p>
+      </form>
     </div>
   </div>
 </section>
