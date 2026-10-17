@@ -138,3 +138,10 @@ async function loadTestimonials() {
 }
 
 loadTestimonials();
+// Product CTAs pre-select the matching service in the contact form
+document.querySelectorAll('[data-service]').forEach(link => {
+  link.addEventListener('click', () => {
+    const select = document.querySelector('#contactForm select[name="service"]');
+    if (select) select.value = link.dataset.service;
+  });
+});

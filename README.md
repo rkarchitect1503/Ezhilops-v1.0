@@ -4,7 +4,7 @@
 
 Clients submit feedback via the **Share Your Feedback** form (`/#feedback`).
 Submissions are emailed through Web3Forms with the subject
-"New Testimonial from EOs Website" — nothing is published automatically.
+"New Testimonial from EzhilOps Website" — nothing is published automatically.
 
 To publish an approved testimonial (only if the client ticked the consent box),
 add it to `testimonials.json` and push to `main`:
