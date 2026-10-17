@@ -3,109 +3,204 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>EzhilOps | Cloud & Modern Workplace Solutions</title>
+<title>EzhilOps | Cloud, DevOps & Modern Workplace Solutions</title>
 <meta name="description" content="EzhilOps delivers cloud deployment, DevOps, infrastructure management, M365, SharePoint, and cloud migration services for modern enterprises.">
+<meta name="theme-color" content="#0a1020">
+<meta property="og:title" content="EzhilOps | Cloud, DevOps & Modern Workplace Solutions">
+<meta property="og:description" content="Deploy, automate, migrate, secure, and optimize your cloud — Azure, AWS, GCP, and Microsoft 365.">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%233b5bfd'/%3E%3Cstop offset='1' stop-color='%2306b6d4'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='32' height='32' rx='8' fill='url(%23g)'/%3E%3Cpath d='M11 9h11M11 16h8M11 23h11M11 9v14' stroke='white' stroke-width='3' stroke-linecap='round'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<!-- Animated background -->
-<div class="bg-glow bg-glow-1"></div>
-<div class="bg-glow bg-glow-2"></div>
+<!-- ICON SPRITE -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-rocket" viewBox="0 0 24 24"><path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"/><path d="m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z"/><path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0"/><path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5"/></symbol>
+  <symbol id="i-server" viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="8" rx="2"/><rect x="2" y="14" width="20" height="8" rx="2"/><path d="M6 6h.01M6 18h.01"/></symbol>
+  <symbol id="i-trend" viewBox="0 0 24 24"><polyline points="22 17 13.5 8.5 8.5 13.5 2 7"/><polyline points="16 17 22 17 22 11"/></symbol>
+  <symbol id="i-support" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="4"/><path d="m4.93 4.93 4.24 4.24M14.83 14.83l4.24 4.24M14.83 9.17l4.24-4.24M4.93 19.07l4.24-4.24"/></symbol>
+  <symbol id="i-grid" viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/></symbol>
+  <symbol id="i-folder" viewBox="0 0 24 24"><path d="M4 20h16a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-7.93a2 2 0 0 1-1.66-.9l-.82-1.2A2 2 0 0 0 7.93 3H4a2 2 0 0 0-2 2v13c0 1.1.9 2 2 2Z"/></symbol>
+  <symbol id="i-infinity" viewBox="0 0 24 24"><path d="M12 12c-2-2.67-4-4-6-4a4 4 0 1 0 0 8c2 0 4-1.33 6-4Zm0 0c2 2.67 4 4 6 4a4 4 0 0 0 0-8c-2 0-4 1.33-6 4Z"/></symbol>
+  <symbol id="i-branch" viewBox="0 0 24 24"><path d="M6 3v12"/><circle cx="18" cy="6" r="3"/><circle cx="6" cy="18" r="3"/><path d="M18 9a9 9 0 0 1-9 9"/></symbol>
+  <symbol id="i-code" viewBox="0 0 24 24"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></symbol>
+  <symbol id="i-users" viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></symbol>
+  <symbol id="i-upload" viewBox="0 0 24 24"><path d="M4 14.9A7 7 0 1 1 15.7 8h1.8a4.5 4.5 0 0 1 2.5 8.2"/><path d="M12 12v9"/><path d="m16 16-4-4-4 4"/></symbol>
+  <symbol id="i-swap" viewBox="0 0 24 24"><path d="M21 12a9 9 0 0 0-9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"/><path d="M3 3v5h5"/><path d="M3 12a9 9 0 0 0 9 9 9.75 9.75 0 0 0 6.74-2.74L21 16"/><path d="M16 21h5v-5"/></symbol>
+  <symbol id="i-layers" viewBox="0 0 24 24"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></symbol>
+  <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></symbol>
+  <symbol id="i-dollar" viewBox="0 0 24 24"><path d="M12 1v22"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></symbol>
+  <symbol id="i-network" viewBox="0 0 24 24"><rect x="16" y="16" width="6" height="6" rx="1"/><rect x="2" y="16" width="6" height="6" rx="1"/><rect x="9" y="2" width="6" height="6" rx="1"/><path d="M5 16v-3a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v3M12 12V8"/></symbol>
+  <symbol id="i-chart" viewBox="0 0 24 24"><path d="M18 20V10M12 20V4M6 20v-6"/></symbol>
+  <symbol id="i-bell" viewBox="0 0 24 24"><path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9"/><path d="M10.3 21a1.94 1.94 0 0 0 3.4 0"/></symbol>
+  <symbol id="i-lock" viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></symbol>
+  <symbol id="i-file" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><path d="m9 15 2 2 4-4"/></symbol>
+  <symbol id="i-eye" viewBox="0 0 24 24"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/></symbol>
+  <symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></symbol>
+  <symbol id="i-compass" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"/></symbol>
+  <symbol id="i-phone" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></symbol>
+  <symbol id="i-mail" viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></symbol>
+  <symbol id="i-quote" viewBox="0 0 24 24"><path d="M3 21c3 0 7-1 7-8V5c0-1.25-.76-2.02-2-2H4c-1.25 0-2 .75-2 1.97V11c0 1.25.75 2 2 2 1 0 1 0 1 1v1c0 1-1 2-2 2s-1 .01-1 1.03V20c0 1 0 1 1 1z"/><path d="M15 21c3 0 7-1 7-8V5c0-1.25-.76-2.02-2-2h-4c-1.25 0-2 .75-2 1.97V11c0 1.25.75 2 2 2h.75c0 2.25.25 4-2.75 4v3c0 1 0 1 1 1z"/></symbol>
+</svg>
 
 <!-- NAV -->
 <header class="navbar" id="navbar">
   <div class="container nav-inner">
-    <a href="#home" class="logo">EzhilOp<span>s</span></a>
-    <nav class="nav-links" id="navLinks">
+    <a href="#home" class="logo" aria-label="EzhilOps home">
+      <span class="logo-mark" aria-hidden="true">E</span>
+      <span class="logo-text">Ezhil<span>Ops</span></span>
+    </a>
+    <nav class="nav-links" id="navLinks" aria-label="Primary">
       <a href="#services">Services</a>
       <a href="#migrations">Migrations</a>
       <a href="#products">Products</a>
       <a href="#about">About</a>
       <a href="#testimonials">Testimonials</a>
-      <a href="#contact">Contact</a>
+      <a href="#contact" class="nav-mobile-cta btn btn-primary">Get a Free Consult</a>
     </nav>
-    <a href="#contact" class="btn btn-primary nav-cta">Get a Free Consult</a>
-    <button class="hamburger" id="hamburger" aria-label="Menu">
+    <a href="#contact" class="btn btn-primary btn-sm nav-cta">Get a Free Consult</a>
+    <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="navLinks">
       <span></span><span></span><span></span>
     </button>
   </div>
 </header>
 
+<main>
+
 <!-- HERO -->
 <section class="hero" id="home">
+  <div class="hero-bg" aria-hidden="true"></div>
   <div class="container hero-inner">
-    <div class="badge">☁️ Cloud, DevOps & Modern Workplace Specialists</div>
-    <h1>Engineering the <span class="gradient-text">Cloud-Native</span> Future for Your Business</h1>
-    <p class="hero-sub">
-      EzhilOps helps organizations deploy, automate, migrate, secure, and optimize their
-      cloud and modern workplace environments — Azure, AWS, GCP, and Microsoft 365 —
-      with zero drama and measurable results.
-    </p>
-    <div class="hero-actions">
-      <a href="#contact" class="btn btn-primary">Talk to an Expert</a>
-      <a href="#services" class="btn btn-ghost">Explore Services</a>
+    <div class="hero-copy">
+      <div class="pill"><span class="pill-dot"></span>Cloud, DevOps &amp; Modern Workplace Specialists</div>
+      <h1>Engineering the <span class="gradient-text">Cloud-Native</span> Future for Your Business</h1>
+      <p class="hero-sub">
+        EzhilOps helps organizations deploy, automate, migrate, secure, and optimize their
+        cloud and modern workplace environments — Azure, AWS, GCP, and Microsoft 365 —
+        with zero drama and measurable results.
+      </p>
+      <div class="hero-actions">
+        <a href="#contact" class="btn btn-primary btn-lg">Talk to an Expert <svg class="ico"><use href="#i-arrow"/></svg></a>
+        <a href="#services" class="btn btn-outline-light btn-lg">Explore Services</a>
+      </div>
+      <div class="hero-stats">
+        <div><strong>10+</strong><span>Cloud Platforms Supported</span></div>
+        <div><strong>100%</strong><span>Migration Success Focus</span></div>
+        <div><strong>24/7</strong><span>Managed Services</span></div>
+      </div>
     </div>
-    <div class="hero-stats">
-      <div><strong>10+</strong><span>Cloud Platforms Supported</span></div>
-      <div><strong>100%</strong><span>Migration Success Focus</span></div>
-      <div><strong>24/7</strong><span>Managed Services</span></div>
+
+    <div class="hero-visual" aria-hidden="true">
+      <div class="console">
+        <div class="console-bar">
+          <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+          <span class="console-title">Cloud Transformation Roadmap</span>
+        </div>
+        <div class="console-body">
+          <div class="step done">
+            <span class="step-icon"><svg class="ico"><use href="#i-check"/></svg></span>
+            <div><strong>Assess</strong><span>Inventory, dependencies &amp; risks</span></div>
+            <em>Complete</em>
+          </div>
+          <div class="step done">
+            <span class="step-icon"><svg class="ico"><use href="#i-check"/></svg></span>
+            <div><strong>Plan</strong><span>Landing zone &amp; migration waves</span></div>
+            <em>Complete</em>
+          </div>
+          <div class="step active">
+            <span class="step-icon"><span class="spinner"></span></span>
+            <div><strong>Migrate</strong><span>Automated with Terraform &amp; CI/CD</span>
+              <div class="progress"><i></i></div>
+            </div>
+            <em>In progress</em>
+          </div>
+          <div class="step">
+            <span class="step-icon"></span>
+            <div><strong>Optimize</strong><span>Cost, security &amp; performance</span></div>
+            <em>Next</em>
+          </div>
+        </div>
+      </div>
+      <div class="float-chip chip-1"><svg class="ico"><use href="#i-shield"/></svg>Security hardened</div>
+      <div class="float-chip chip-2"><svg class="ico"><use href="#i-infinity"/></svg>CI/CD automated</div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="tech-strip">
+      <p>Expertise across</p>
+      <ul>
+        <li>Microsoft Azure</li>
+        <li>AWS</li>
+        <li>Google Cloud</li>
+        <li>Microsoft 365</li>
+        <li>Azure DevOps</li>
+        <li>Terraform</li>
+        <li>SharePoint</li>
+        <li>Entra ID</li>
+      </ul>
     </div>
   </div>
 </section>
 
 <!-- SERVICES -->
-<section class="services" id="services">
+<section class="section" id="services">
   <div class="container">
-    <p class="eyebrow">What We Do</p>
-    <h2>End-to-End Cloud, DevOps & Infrastructure Services</h2>
-    <p class="section-sub">From greenfield cloud deployments to legacy infrastructure modernization and full DevOps automation — we've got every stage covered.</p>
+    <div class="section-head">
+      <p class="eyebrow">What We Do</p>
+      <h2>End-to-End Cloud, DevOps &amp; Infrastructure Services</h2>
+      <p class="section-sub">From greenfield cloud deployments to legacy infrastructure modernization and full DevOps automation — we've got every stage covered.</p>
+    </div>
 
     <div class="grid grid-3">
-      <div class="card">
-        <div class="icon">🚀</div>
+      <div class="card service-card reveal">
+        <div class="icon-box"><svg class="ico"><use href="#i-rocket"/></svg></div>
         <h3>Cloud Deployment Services</h3>
         <p>Design and deploy secure, scalable new cloud environments built right the first time — on Azure, AWS, or GCP.</p>
       </div>
-      <div class="card">
-        <div class="icon">🖥️</div>
+      <div class="card service-card reveal">
+        <div class="icon-box"><svg class="ico"><use href="#i-server"/></svg></div>
         <h3>Legacy Infrastructure Management</h3>
         <p>Keep existing on-premises and hybrid infrastructure stable, patched, and performing while you plan your next move.</p>
       </div>
-      <div class="card">
-        <div class="icon">⚙️</div>
-        <h3>Cloud Cost & Performance Optimization</h3>
+      <div class="card service-card reveal">
+        <div class="icon-box"><svg class="ico"><use href="#i-trend"/></svg></div>
+        <h3>Cloud Cost &amp; Performance Optimization</h3>
         <p>Cut cloud waste and boost performance with cost, capacity, and architecture optimization reviews.</p>
       </div>
-      <div class="card">
-        <div class="icon">🛠️</div>
+      <div class="card service-card reveal">
+        <div class="icon-box"><svg class="ico"><use href="#i-support"/></svg></div>
         <h3>Managed IT Services</h3>
         <p>Ongoing monitoring, support, and administration so your environment just works — day and night.</p>
       </div>
-      <div class="card">
-        <div class="icon">🧩</div>
+      <div class="card service-card reveal">
+        <div class="icon-box"><svg class="ico"><use href="#i-grid"/></svg></div>
         <h3>Microsoft 365 Infrastructure Management</h3>
         <p>Tenant administration, security hardening, licensing, and governance across Microsoft 365.</p>
       </div>
-      <div class="card">
-        <div class="icon">📁</div>
-        <h3>SharePoint Development & Management</h3>
+      <div class="card service-card reveal">
+        <div class="icon-box"><svg class="ico"><use href="#i-folder"/></svg></div>
+        <h3>SharePoint Development &amp; Management</h3>
         <p>Custom SharePoint site design, information architecture, workflows, and ongoing site management.</p>
       </div>
-      <div class="card">
-        <div class="icon">🔧</div>
+      <div class="card service-card reveal">
+        <div class="icon-box"><svg class="ico"><use href="#i-infinity"/></svg></div>
         <h3>DevOps Services</h3>
         <p>CI/CD pipeline design, release automation, containerization, and monitoring to help teams ship faster and safer.</p>
       </div>
-      <div class="card">
-        <div class="icon">🔗</div>
+      <div class="card service-card reveal">
+        <div class="icon-box"><svg class="ico"><use href="#i-branch"/></svg></div>
         <h3>Azure DevOps Implementation</h3>
         <p>Set up and manage Azure Boards, Repos, Pipelines, and Artifacts for streamlined end-to-end development workflows.</p>
       </div>
-      <div class="card">
-        <div class="icon">📜</div>
+      <div class="card service-card reveal">
+        <div class="icon-box"><svg class="ico"><use href="#i-code"/></svg></div>
         <h3>Terraform (Infrastructure as Code)</h3>
         <p>Build reusable, version-controlled Terraform modules to provision and manage cloud infrastructure consistently.</p>
       </div>
@@ -113,36 +208,78 @@
   </div>
 </section>
 
-<!-- MIGRATIONS -->
-<section class="migrations" id="migrations">
+<!-- PROCESS -->
+<section class="section section-soft" id="process">
   <div class="container">
-    <p class="eyebrow">Migrations</p>
-    <h2>Move Platforms Without Losing a Beat</h2>
-    <p class="section-sub">Tool, cloud, and cross-cloud migrations planned and executed with minimal downtime and full user adoption support.</p>
+    <div class="section-head">
+      <p class="eyebrow">How We Work</p>
+      <h2>A Clear, Low-Risk Path From Idea to Production</h2>
+      <p class="section-sub">Every engagement follows a proven, transparent process — so you always know what's happening and why.</p>
+    </div>
+    <ol class="process">
+      <li class="reveal">
+        <span class="process-num">01</span>
+        <div class="icon-box"><svg class="ico"><use href="#i-search"/></svg></div>
+        <h3>Discover &amp; Assess</h3>
+        <p>We map your current environment, dependencies, risks, and business goals.</p>
+      </li>
+      <li class="reveal">
+        <span class="process-num">02</span>
+        <div class="icon-box"><svg class="ico"><use href="#i-compass"/></svg></div>
+        <h3>Plan &amp; Design</h3>
+        <p>A target architecture and phased roadmap built around minimal disruption.</p>
+      </li>
+      <li class="reveal">
+        <span class="process-num">03</span>
+        <div class="icon-box"><svg class="ico"><use href="#i-rocket"/></svg></div>
+        <h3>Build &amp; Migrate</h3>
+        <p>Automated, repeatable delivery with Infrastructure as Code and CI/CD.</p>
+      </li>
+      <li class="reveal">
+        <span class="process-num">04</span>
+        <div class="icon-box"><svg class="ico"><use href="#i-trend"/></svg></div>
+        <h3>Operate &amp; Optimize</h3>
+        <p>Ongoing managed support, cost tuning, and security hardening.</p>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<!-- MIGRATIONS -->
+<section class="section" id="migrations">
+  <div class="container">
+    <div class="section-head">
+      <p class="eyebrow">Migrations</p>
+      <h2>Move Platforms Without Losing a Beat</h2>
+      <p class="section-sub">Tool, cloud, and cross-cloud migrations planned and executed with minimal downtime and full user adoption support.</p>
+    </div>
 
     <div class="grid grid-3">
-      <div class="card card-lg">
-        <h3>🔁 Collaboration & Identity Tool Migration</h3>
-        <ul class="check-list">
-          <li>Zoom to Microsoft Teams Migration</li>
-          <li>Box to SharePoint / OneDrive Migration</li>
-          <li>Okta to Microsoft Entra ID SSO Migration</li>
+      <div class="card migration-card reveal">
+        <div class="icon-box"><svg class="ico"><use href="#i-users"/></svg></div>
+        <h3>Collaboration &amp; Identity Tool Migration</h3>
+        <ul class="route-list">
+          <li><span>Zoom</span><svg class="ico"><use href="#i-arrow"/></svg><span>Microsoft Teams</span></li>
+          <li><span>Box</span><svg class="ico"><use href="#i-arrow"/></svg><span>SharePoint / OneDrive</span></li>
+          <li><span>Okta</span><svg class="ico"><use href="#i-arrow"/></svg><span>Microsoft Entra ID SSO</span></li>
         </ul>
       </div>
-      <div class="card card-lg">
-        <h3>☁️ On-Premises to Cloud Migration</h3>
-        <ul class="check-list">
-          <li>On-Premises to Microsoft Azure Migration</li>
-          <li>On-Premises to Amazon Web Services (AWS) Migration</li>
-          <li>On-Premises to Google Cloud Platform (GCP) Migration</li>
+      <div class="card migration-card reveal">
+        <div class="icon-box"><svg class="ico"><use href="#i-upload"/></svg></div>
+        <h3>On-Premises to Cloud Migration</h3>
+        <ul class="route-list">
+          <li><span>On-Premises</span><svg class="ico"><use href="#i-arrow"/></svg><span>Microsoft Azure</span></li>
+          <li><span>On-Premises</span><svg class="ico"><use href="#i-arrow"/></svg><span>Amazon Web Services</span></li>
+          <li><span>On-Premises</span><svg class="ico"><use href="#i-arrow"/></svg><span>Google Cloud Platform</span></li>
         </ul>
       </div>
-      <div class="card card-lg">
-        <h3>🔄 Cross-Cloud Migration</h3>
-        <ul class="check-list">
-          <li>AWS to Microsoft Azure Migration</li>
-          <li>Microsoft Azure to Google Cloud Platform (GCP) Migration</li>
-          <li>Google Cloud Platform (GCP) to AWS Migration</li>
+      <div class="card migration-card reveal">
+        <div class="icon-box"><svg class="ico"><use href="#i-swap"/></svg></div>
+        <h3>Cross-Cloud Migration</h3>
+        <ul class="route-list">
+          <li><span>AWS</span><svg class="ico"><use href="#i-arrow"/></svg><span>Microsoft Azure</span></li>
+          <li><span>Microsoft Azure</span><svg class="ico"><use href="#i-arrow"/></svg><span>Google Cloud Platform</span></li>
+          <li><span>Google Cloud Platform</span><svg class="ico"><use href="#i-arrow"/></svg><span>AWS</span></li>
         </ul>
       </div>
     </div>
@@ -150,15 +287,18 @@
 </section>
 
 <!-- PRODUCTS -->
-<section class="products" id="products">
+<section class="section section-dark" id="products">
+  <div class="product-glow" aria-hidden="true"></div>
   <div class="container">
-    <p class="eyebrow">Our Products</p>
-    <h2>Software Built From Real Cloud Engagements</h2>
-    <p class="section-sub">Tools we've built to give teams clarity and control over their cloud environments.</p>
+    <div class="section-head">
+      <p class="eyebrow">Our Products</p>
+      <h2>Software Built From Real Cloud Engagements</h2>
+      <p class="section-sub">Tools we've built to give teams clarity and control over their cloud environments.</p>
+    </div>
 
     <article class="product" id="ezcloud-endpoint">
       <div class="product-head">
-        <div>
+        <div class="product-copy">
           <div class="product-platforms">
             <span>Amazon Web Services</span>
             <span>Microsoft Azure</span>
@@ -170,67 +310,87 @@
             read-only access and gives you one clear picture of your cloud: what you have,
             how secure it is, what it costs, and how everything connects.
           </p>
+          <ul class="product-pillars">
+            <li><svg class="ico"><use href="#i-check"/></svg><span><strong>Inventory</strong> — every account and region in one view</span></li>
+            <li><svg class="ico"><use href="#i-check"/></svg><span><strong>Security</strong> — mapped to CIS Foundations Benchmarks</span></li>
+            <li><svg class="ico"><use href="#i-check"/></svg><span><strong>Cost</strong> — savings measured against real bills</span></li>
+            <li><svg class="ico"><use href="#i-check"/></svg><span><strong>Architecture</strong> — exposure, dependencies and traffic flows</span></li>
+          </ul>
           <div class="hero-actions product-actions">
-            <a href="#contact" class="btn btn-primary" data-service="EZCloud Endpoint">Request a Demo</a>
+            <a href="#contact" class="btn btn-primary btn-lg" data-service="EZCloud Endpoint">Request a Demo <svg class="ico"><use href="#i-arrow"/></svg></a>
           </div>
         </div>
-        <ul class="product-pillars">
-          <li><strong>Inventory</strong><span>Every account and region in one view</span></li>
-          <li><strong>Security</strong><span>Mapped to CIS Foundations Benchmarks</span></li>
-          <li><strong>Cost</strong><span>Savings measured against real bills</span></li>
-          <li><strong>Architecture</strong><span>Exposure, dependencies and traffic flows</span></li>
-        </ul>
+
+        <figure class="product-preview" aria-label="Illustrative preview of EZCloud Endpoint findings">
+          <div class="console console-dark">
+            <div class="console-bar">
+              <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+              <span class="console-title">EZCloud Endpoint · Prioritized Plan</span>
+            </div>
+            <div class="console-tabs">
+              <span class="is-active">All</span><span>Security</span><span>Cost</span><span>Architecture</span>
+            </div>
+            <ul class="findings">
+              <li><b class="sev sev-high">High</b><span>Storage account allows public access</span><small>CIS Benchmark</small></li>
+              <li><b class="sev sev-high">High</b><span>Security group open to the internet on SSH</span><small>Exposure</small></li>
+              <li><b class="sev sev-save">Saving</b><span>Idle virtual machine — no meaningful CPU usage</span><small>Billing data</small></li>
+              <li><b class="sev sev-med">Medium</b><span>Single NAT gateway — single point of failure</span><small>Architecture</small></li>
+              <li><b class="sev sev-save">Saving</b><span>Unattached managed disks</span><small>Billing data</small></li>
+            </ul>
+          </div>
+          <figcaption>Illustrative preview</figcaption>
+        </figure>
       </div>
 
       <div class="grid grid-3 product-features">
-        <div class="card">
-          <div class="icon">🗂️</div>
-          <h3>Unified Inventory</h3>
+        <div class="feature reveal">
+          <div class="icon-box"><svg class="ico"><use href="#i-layers"/></svg></div>
+          <h4>Unified Inventory</h4>
           <p>Discovers resources across all your AWS accounts, Azure subscriptions and regions into a single inventory.</p>
         </div>
-        <div class="card">
-          <div class="icon">🛡️</div>
-          <h3>Security &amp; Compliance</h3>
+        <div class="feature reveal">
+          <div class="icon-box"><svg class="ico"><use href="#i-shield"/></svg></div>
+          <h4>Security &amp; Compliance</h4>
           <p>Checks resources for security risks and maps results to CIS Foundations Benchmarks, alongside findings from Microsoft Defender for Cloud, Azure Policy, AWS Security Hub and Amazon GuardDuty.</p>
         </div>
-        <div class="card">
-          <div class="icon">💰</div>
-          <h3>Cost Optimization</h3>
+        <div class="feature reveal">
+          <div class="icon-box"><svg class="ico"><use href="#i-dollar"/></svg></div>
+          <h4>Cost Optimization</h4>
           <p>Uses real billing data to show where your money goes, flag unexpected cost increases, and find idle, oversized or unused resources — then measures each saving against your bills.</p>
         </div>
-        <div class="card">
-          <div class="icon">🕸️</div>
-          <h3>Architecture &amp; Network Insight</h3>
+        <div class="feature reveal">
+          <div class="icon-box"><svg class="ico"><use href="#i-network"/></svg></div>
+          <h4>Architecture &amp; Network Insight</h4>
           <p>Shows what is exposed to the internet, which workloads depend on each other, single points of failure, backup gaps, and how traffic flows — including broken or misconfigured connections.</p>
         </div>
-        <div class="card">
-          <div class="icon">📊</div>
-          <h3>Prioritized Plan &amp; Reports</h3>
+        <div class="feature reveal">
+          <div class="icon-box"><svg class="ico"><use href="#i-chart"/></svg></div>
+          <h4>Prioritized Plan &amp; Reports</h4>
           <p>One prioritized plan across security, cost and architecture, with clear reports for executive, security, finance and engineering teams.</p>
         </div>
-        <div class="card">
-          <div class="icon">⏰</div>
-          <h3>Scheduled Assessments</h3>
+        <div class="feature reveal">
+          <div class="icon-box"><svg class="ico"><use href="#i-bell"/></svg></div>
+          <h4>Scheduled Assessments</h4>
           <p>Run assessments on a schedule and get alerted when new critical issues appear.</p>
         </div>
       </div>
 
       <div class="product-trust">
-        <div>🔒 <strong>Read-only by design.</strong> EZCloud Endpoint never changes anything in your cloud.</div>
-        <div>🧾 <strong>Evidence for every finding.</strong> Every finding and saving comes with the evidence behind it.</div>
-        <div>🔍 <strong>No blind spots hidden.</strong> Anything it could not check is reported clearly, not assumed to be fine.</div>
+        <div><svg class="ico"><use href="#i-lock"/></svg><p><strong>Read-only by design.</strong> EZCloud Endpoint never changes anything in your cloud.</p></div>
+        <div><svg class="ico"><use href="#i-file"/></svg><p><strong>Evidence for every finding.</strong> Every finding and saving comes with the evidence behind it.</p></div>
+        <div><svg class="ico"><use href="#i-eye"/></svg><p><strong>No blind spots hidden.</strong> Anything it could not check is reported clearly, not assumed to be fine.</p></div>
       </div>
     </article>
   </div>
 </section>
 
 <!-- ABOUT -->
-<section class="about" id="about">
+<section class="section" id="about">
   <div class="container about-inner">
     <div>
       <p class="eyebrow">About EzhilOps</p>
-      <h2>Your Trusted Partner for Cloud & Modern Workplace Transformation</h2>
-      <p>
+      <h2>Your Trusted Partner for Cloud &amp; Modern Workplace Transformation</h2>
+      <p class="about-text">
         EzhilOps is a cloud and infrastructure consulting startup built around one idea:
         cloud transformation shouldn't be stressful. We combine deep platform
         expertise across Azure, AWS, GCP, Microsoft 365, and modern DevOps
@@ -238,45 +398,53 @@
         deployment, migration, automation, and optimization project delivers
         real value, not just technical checkboxes.
       </p>
-      <div class="about-points">
-        <div>✅ Certified cloud, DevOps & M365 specialists</div>
-        <div>✅ Migration-first, downtime-averse methodology</div>
-        <div>✅ Infrastructure as Code with Terraform</div>
-        <div>✅ Transparent, ongoing managed support</div>
-      </div>
+      <ul class="about-points">
+        <li><svg class="ico"><use href="#i-check"/></svg>Certified cloud, DevOps &amp; M365 specialists</li>
+        <li><svg class="ico"><use href="#i-check"/></svg>Migration-first, downtime-averse methodology</li>
+        <li><svg class="ico"><use href="#i-check"/></svg>Infrastructure as Code with Terraform</li>
+        <li><svg class="ico"><use href="#i-check"/></svg>Transparent, ongoing managed support</li>
+      </ul>
     </div>
-    <div class="about-visual">
-      <div class="orbit-card">☁️ Azure</div>
-      <div class="orbit-card">🅰️ AWS</div>
-      <div class="orbit-card">🇬 GCP</div>
-      <div class="orbit-card">🧩 M365</div>
-      <div class="orbit-card">🔗 Azure DevOps</div>
-      <div class="orbit-card">📜 Terraform</div>
+    <div class="platform-grid">
+      <div class="platform reveal"><span class="pdot" style="--c:#0078d4"></span>Microsoft Azure</div>
+      <div class="platform reveal"><span class="pdot" style="--c:#ff9900"></span>Amazon Web Services</div>
+      <div class="platform reveal"><span class="pdot" style="--c:#34a853"></span>Google Cloud</div>
+      <div class="platform reveal"><span class="pdot" style="--c:#d83b01"></span>Microsoft 365</div>
+      <div class="platform reveal"><span class="pdot" style="--c:#2560e0"></span>Azure DevOps</div>
+      <div class="platform reveal"><span class="pdot" style="--c:#7b42bc"></span>Terraform</div>
     </div>
   </div>
 </section>
 
 <!-- TESTIMONIALS -->
-<section class="testimonials" id="testimonials">
+<section class="section section-soft" id="testimonials">
   <div class="container">
-    <p class="eyebrow">Client Feedback</p>
-    <h2>What Our Clients Say</h2>
-    <p class="section-sub">Real feedback from the teams we've helped deploy, migrate, and automate.</p>
+    <div class="section-head">
+      <p class="eyebrow">Client Feedback</p>
+      <h2>What Our Clients Say</h2>
+      <p class="section-sub">Real feedback from the teams we've helped deploy, migrate, and automate.</p>
+    </div>
 
     <div class="grid grid-3" id="testimonialGrid"></div>
-    <div class="card testimonial-empty" id="testimonialEmpty" hidden>
-      <div class="icon">💬</div>
+    <div class="testimonial-empty" id="testimonialEmpty" hidden>
+      <div class="icon-box"><svg class="ico"><use href="#i-quote"/></svg></div>
       <h3>Be the first to share your experience</h3>
       <p>Worked with EzhilOps? We'd love to hear how it went — your feedback helps us improve and helps others choose with confidence.</p>
+      <a href="#feedback" class="btn btn-outline btn-sm">Leave Feedback</a>
     </div>
 
     <div class="feedback-wrap" id="feedback">
-      <div>
+      <div class="feedback-intro">
         <h3>Share Your Feedback</h3>
         <p>Tell us about your experience working with EzhilOps. Every submission is reviewed before it's published on this page.</p>
+        <ul class="about-points">
+          <li><svg class="ico"><use href="#i-check"/></svg>Takes less than two minutes</li>
+          <li><svg class="ico"><use href="#i-check"/></svg>Your email is never published</li>
+          <li><svg class="ico"><use href="#i-check"/></svg>Published only with your consent</li>
+        </ul>
       </div>
 
-      <form class="contact-form" id="feedbackForm">
+      <form class="form-card" id="feedbackForm">
         <input type="hidden" name="access_key" value="936ff566-ab6f-486e-ba40-7d80868ab907">
         <input type="hidden" name="subject" value="New Testimonial from EzhilOps Website">
         <input type="hidden" name="from_name" value="EzhilOps Website - Feedback">
@@ -294,43 +462,61 @@
         </fieldset>
 
         <div class="form-row">
-          <input type="text" name="name" placeholder="Full Name" required>
-          <input type="email" name="email" placeholder="Email Address (not published)" required>
+          <label class="field"><span>Full Name</span><input type="text" name="name" placeholder="Jane Doe" required></label>
+          <label class="field"><span>Email <small>(not published)</small></span><input type="email" name="email" placeholder="jane@company.com" required></label>
         </div>
         <div class="form-row">
-          <input type="text" name="role" placeholder="Job Title">
-          <input type="text" name="company" placeholder="Company">
+          <label class="field"><span>Job Title</span><input type="text" name="role" placeholder="IT Manager"></label>
+          <label class="field"><span>Company</span><input type="text" name="company" placeholder="Company name"></label>
         </div>
-        <select name="service">
-          <option value="">Service You Used</option>
-          <option>Cloud Deployment Services</option>
-          <option>Legacy Infrastructure Management</option>
-          <option>Cloud Cost & Performance Optimization</option>
-          <option>Managed IT Services</option>
-          <option>Microsoft 365 Infrastructure Management</option>
-          <option>SharePoint Development & Management</option>
-          <option>DevOps Services</option>
-          <option>Azure DevOps Implementation</option>
-          <option>Terraform (Infrastructure as Code)</option>
-          <option>Collaboration & Identity Tool Migration</option>
-          <option>On-Premises to Cloud Migration (Azure/AWS/GCP)</option>
-          <option>Cross-Cloud Migration (AWS/Azure/GCP)</option>
-          <option>EZCloud Endpoint</option>
-        </select>
-        <textarea name="message" rows="4" placeholder="How was your experience working with us?" required></textarea>
+        <label class="field"><span>Service You Used</span>
+          <select name="service">
+            <option value="">Select a service</option>
+            <option>Cloud Deployment Services</option>
+            <option>Legacy Infrastructure Management</option>
+            <option>Cloud Cost & Performance Optimization</option>
+            <option>Managed IT Services</option>
+            <option>Microsoft 365 Infrastructure Management</option>
+            <option>SharePoint Development & Management</option>
+            <option>DevOps Services</option>
+            <option>Azure DevOps Implementation</option>
+            <option>Terraform (Infrastructure as Code)</option>
+            <option>Collaboration & Identity Tool Migration</option>
+            <option>On-Premises to Cloud Migration (Azure/AWS/GCP)</option>
+            <option>Cross-Cloud Migration (AWS/Azure/GCP)</option>
+            <option>EZCloud Endpoint</option>
+          </select>
+        </label>
+        <label class="field"><span>Your Feedback</span>
+          <textarea name="message" rows="4" placeholder="How was your experience working with us?" required></textarea>
+        </label>
         <label class="consent">
           <input type="checkbox" name="publish_consent" value="Yes" required>
           <span>I agree that EzhilOps may publish my name, title, company, and feedback on this website.</span>
         </label>
-        <button type="submit" class="btn btn-primary btn-full" id="feedbackBtn">Submit Feedback</button>
-        <p class="form-note" id="feedbackNote"></p>
+        <button type="submit" class="btn btn-primary btn-full btn-lg" id="feedbackBtn">Submit Feedback</button>
+        <p class="form-note" id="feedbackNote" role="status"></p>
       </form>
     </div>
   </div>
 </section>
 
+<!-- CTA BAND -->
+<section class="cta-band">
+  <div class="container cta-inner">
+    <div>
+      <h2>Ready to modernize your cloud?</h2>
+      <p>Book a free consultation and get a clear, practical plan for your next move.</p>
+    </div>
+    <div class="hero-actions">
+      <a href="#contact" class="btn btn-light btn-lg">Get a Free Consult <svg class="ico"><use href="#i-arrow"/></svg></a>
+      <a href="tel:+917996759829" class="btn btn-outline-light btn-lg">Call +91 79967 59829</a>
+    </div>
+  </div>
+</section>
+
 <!-- CONTACT -->
-<section class="contact" id="contact">
+<section class="section" id="contact">
   <div class="container contact-inner">
     <div>
       <p class="eyebrow">Get In Touch</p>
@@ -339,61 +525,90 @@
 
       <div class="contact-details">
         <a href="tel:+917996759829" class="contact-item">
-          <span class="icon-circle">📞</span>
+          <span class="icon-box"><svg class="ico"><use href="#i-phone"/></svg></span>
           <div><strong>Call Us</strong><span>+91 79967 59829</span></div>
         </a>
         <a href="mailto:rkarchitect1503@gmail.com" class="contact-item">
-          <span class="icon-circle">✉️</span>
+          <span class="icon-box"><svg class="ico"><use href="#i-mail"/></svg></span>
           <div><strong>Email Us</strong><span>rkarchitect1503@gmail.com</span></div>
         </a>
       </div>
     </div>
 
-    <form class="contact-form" id="contactForm">
+    <form class="form-card" id="contactForm">
       <input type="hidden" name="access_key" value="936ff566-ab6f-486e-ba40-7d80868ab907">
       <input type="hidden" name="subject" value="New Inquiry from EzhilOps Website">
       <input type="hidden" name="from_name" value="EzhilOps Website">
       <input type="checkbox" name="botcheck" style="display:none">
 
       <div class="form-row">
-        <input type="text" name="name" placeholder="Full Name" required>
-        <input type="email" name="email" placeholder="Email Address" required>
+        <label class="field"><span>Full Name</span><input type="text" name="name" placeholder="Jane Doe" required></label>
+        <label class="field"><span>Email Address</span><input type="email" name="email" placeholder="jane@company.com" required></label>
       </div>
       <div class="form-row">
-        <input type="tel" name="phone" placeholder="Phone Number">
-        <select name="service">
-          <option value="">Select a Service</option>
-          <option>Cloud Deployment Services</option>
-          <option>Legacy Infrastructure Management</option>
-          <option>Cloud Cost & Performance Optimization</option>
-          <option>Managed IT Services</option>
-          <option>Microsoft 365 Infrastructure Management</option>
-          <option>SharePoint Development & Management</option>
-          <option>DevOps Services</option>
-          <option>Azure DevOps Implementation</option>
-          <option>Terraform (Infrastructure as Code)</option>
-          <option>Collaboration & Identity Tool Migration</option>
-          <option>On-Premises to Cloud Migration (Azure/AWS/GCP)</option>
-          <option>Cross-Cloud Migration (AWS/Azure/GCP)</option>
-          <option>EZCloud Endpoint</option>
-        </select>
+        <label class="field"><span>Phone Number</span><input type="tel" name="phone" placeholder="+91 ..."></label>
+        <label class="field"><span>Service</span>
+          <select name="service">
+            <option value="">Select a service</option>
+            <option>Cloud Deployment Services</option>
+            <option>Legacy Infrastructure Management</option>
+            <option>Cloud Cost & Performance Optimization</option>
+            <option>Managed IT Services</option>
+            <option>Microsoft 365 Infrastructure Management</option>
+            <option>SharePoint Development & Management</option>
+            <option>DevOps Services</option>
+            <option>Azure DevOps Implementation</option>
+            <option>Terraform (Infrastructure as Code)</option>
+            <option>Collaboration & Identity Tool Migration</option>
+            <option>On-Premises to Cloud Migration (Azure/AWS/GCP)</option>
+            <option>Cross-Cloud Migration (AWS/Azure/GCP)</option>
+            <option>EZCloud Endpoint</option>
+          </select>
+        </label>
       </div>
-      <textarea name="message" rows="4" placeholder="Tell us about your project..." required></textarea>
-      <button type="submit" class="btn btn-primary btn-full" id="submitBtn">Send Message</button>
-      <p class="form-note" id="formNote"></p>
+      <label class="field"><span>Project Details</span>
+        <textarea name="message" rows="5" placeholder="Tell us about your project..." required></textarea>
+      </label>
+      <button type="submit" class="btn btn-primary btn-full btn-lg" id="submitBtn">Send Message</button>
+      <p class="form-note" id="formNote" role="status"></p>
     </form>
   </div>
 </section>
 
+</main>
+
 <!-- FOOTER -->
 <footer class="footer">
-  <div class="container footer-inner">
-    <div class="logo">EzhilOp<span>s</span></div>
-    <p>&copy; <span id="year"></span> EzhilOps. All rights reserved.</p>
-    <div class="footer-contact">
+  <div class="container footer-grid">
+    <div class="footer-brand">
+      <a href="#home" class="logo" aria-label="EzhilOps home">
+        <span class="logo-mark" aria-hidden="true">E</span>
+        <span class="logo-text">Ezhil<span>Ops</span></span>
+      </a>
+      <p>Cloud, DevOps &amp; modern workplace solutions — deploy, automate, migrate, secure, and optimize with confidence.</p>
+    </div>
+    <div>
+      <h4>Services</h4>
+      <a href="#services">Cloud Deployment</a>
+      <a href="#services">DevOps &amp; Azure DevOps</a>
+      <a href="#services">Microsoft 365 &amp; SharePoint</a>
+      <a href="#migrations">Migrations</a>
+    </div>
+    <div>
+      <h4>Company</h4>
+      <a href="#products">EZCloud Endpoint</a>
+      <a href="#about">About</a>
+      <a href="#testimonials">Testimonials</a>
+      <a href="#feedback">Leave Feedback</a>
+    </div>
+    <div>
+      <h4>Contact</h4>
       <a href="tel:+917996759829">+91 79967 59829</a>
       <a href="mailto:rkarchitect1503@gmail.com">rkarchitect1503@gmail.com</a>
     </div>
+  </div>
+  <div class="container footer-bottom">
+    <p>&copy; <span id="year"></span> EzhilOps. All rights reserved.</p>
   </div>
 </footer>
 

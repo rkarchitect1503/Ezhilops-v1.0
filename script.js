@@ -1,9 +1,37 @@
 // Mobile menu toggle
+const navbar = document.getElementById('navbar');
 const hamburger = document.getElementById('hamburger');
 const navLinks = document.getElementById('navLinks');
-hamburger?.addEventListener('click', () => {
-  navLinks.classList.toggle('open');
-  navLinks.style.display = navLinks.classList.contains('open') ? 'flex' : 'none';
+
+function setMenu(open) {
+  navLinks.classList.toggle('open', open);
+  navbar.classList.toggle('menu-open', open);
+  hamburger.setAttribute('aria-expanded', String(open));
+  hamburger.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+}
+
+hamburger?.addEventListener('click', () => setMenu(!navLinks.classList.contains('open')));
+navLinks?.querySelectorAll('a').forEach(link => link.addEventListener('click', () => setMenu(false)));
+document.addEventListener('keydown', e => { if (e.key === 'Escape') setMenu(false); });
+
+// Navbar background once scrolled past the top
+function updateNavbar() {
+  navbar.classList.toggle('scrolled', window.scrollY > 10);
+}
+window.addEventListener('scroll', updateNavbar, { passive: true });
+updateNavbar();
+
+// Highlight the nav link for the section in view
+const navAnchors = [...navLinks.querySelectorAll('a:not(.btn)')];
+const sectionObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (!entry.isIntersecting) return;
+    navAnchors.forEach(a => a.classList.toggle('active', a.getAttribute('href') === `#${entry.target.id}`));
+  });
+}, { rootMargin: '-45% 0px -50% 0px' });
+navAnchors.forEach(a => {
+  const section = document.querySelector(a.getAttribute('href'));
+  if (section) sectionObserver.observe(section);
 });
 
 // Footer year
@@ -16,12 +44,17 @@ function setupWeb3Form(formId, btnId, noteId, successMessage) {
   const submitBtn = document.getElementById(btnId);
   const btnLabel = submitBtn?.textContent;
 
+  function showNote(message, type) {
+    note.textContent = message;
+    note.className = `form-note ${type}`;
+  }
+
   form?.addEventListener('submit', async function (e) {
     e.preventDefault();
 
     submitBtn.disabled = true;
     submitBtn.textContent = "Sending...";
-    note.textContent = "";
+    showNote("", "");
 
     const formData = new FormData(form);
 
@@ -35,16 +68,13 @@ function setupWeb3Form(formId, btnId, noteId, successMessage) {
       const result = await response.json();
 
       if (result.success) {
-        note.textContent = successMessage;
-        note.style.color = "var(--accent)";
+        showNote(successMessage, "success");
         form.reset();
       } else {
-        note.textContent = "Something went wrong. Please email us directly at rkarchitect1503@gmail.com.";
-        note.style.color = "#ff6b6b";
+        showNote("Something went wrong. Please email us directly at rkarchitect1503@gmail.com.", "error");
       }
     } catch (error) {
-      note.textContent = "Something went wrong. Please email us directly at rkarchitect1503@gmail.com.";
-      note.style.color = "#ff6b6b";
+      showNote("Something went wrong. Please email us directly at rkarchitect1503@gmail.com.", "error");
     } finally {
       submitBtn.disabled = false;
       submitBtn.textContent = btnLabel;
@@ -57,27 +87,22 @@ setupWeb3Form('contactForm', 'submitBtn', 'formNote',
 setupWeb3Form('feedbackForm', 'feedbackBtn', 'feedbackNote',
   "Thank you for your feedback! It will appear here once reviewed.");
 
-// Reveal cards on scroll
+// Reveal elements on scroll
 const observer = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
-      entry.target.style.opacity = 1;
-      entry.target.style.transform = 'translateY(0)';
+      entry.target.classList.add('is-visible');
+      observer.unobserve(entry.target);
     }
   });
-}, { threshold: 0.15 });
+}, { threshold: 0.12 });
 
-document.querySelectorAll('.card, .orbit-card').forEach(el => {
-  el.style.opacity = 0;
-  el.style.transform = 'translateY(20px)';
-  el.style.transition = 'all 0.6s ease';
-  observer.observe(el);
-});
+document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 
 // Testimonials — approved entries live in testimonials.json
 function renderTestimonial(t) {
   const card = document.createElement('div');
-  card.className = 'card testimonial-card';
+  card.className = 'card testimonial-card reveal';
 
   const rating = Math.max(0, Math.min(5, Number(t.rating) || 0));
   const stars = document.createElement('div');
@@ -97,13 +122,14 @@ function renderTestimonial(t) {
   meta.textContent = [t.role, t.company].filter(Boolean).join(', ');
   author.append(name, meta);
 
-  card.append(stars, quote, author);
+  card.append(stars, quote);
   if (t.service) {
     const tag = document.createElement('span');
     tag.className = 'testimonial-tag';
     tag.textContent = t.service;
     card.append(tag);
   }
+  card.append(author);
   return card;
 }
 
@@ -129,15 +155,13 @@ async function loadTestimonials() {
 
   items.forEach(t => {
     const card = renderTestimonial(t);
-    card.style.opacity = 0;
-    card.style.transform = 'translateY(20px)';
-    card.style.transition = 'all 0.6s ease';
     grid.append(card);
     observer.observe(card);
   });
 }
 
 loadTestimonials();
+
 // Product CTAs pre-select the matching service in the contact form
 document.querySelectorAll('[data-service]').forEach(link => {
   link.addEventListener('click', () => {
